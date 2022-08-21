@@ -1,0 +1,130 @@
+<meta charset="UTF-8">
+
+<h3>ENCRIPTADOR Y DESENCRIPTADOR</h3>
+
+<input class="input"/>
+<h1 class="titulo"></h1>
+
+<button>Encriptar</button>
+<br></br>
+<button class="dsn">Desencriptar</button>
+
+<script>
+
+	let diccionario = {
+
+		"a": "ai",
+		"e": "enter",
+		"i": "imes",
+		"o": "ober",
+		"u": "ufat",
+	}
+
+	let resultEncriptado = document.querySelector(".titulo");
+    
+    var button_e = document.querySelector("button");
+    var button_d = document.querySelector(".dsn");
+
+	function encriptar(){
+
+		let input = document.querySelector(".input").value;
+		var encr = [];
+		var encr2 = [];
+
+		for (let i = 0; i <= input.length -1; i++){
+			encr.push(input[i]);
+		}
+		console.log(encr);
+
+		for (var j = 0; j <= encr.length -1; j++){
+
+		let l = encr[j];
+
+		switch(l){
+			case "a":
+				l = "ai";
+				encr2.push(l);
+				break;
+			case "e":
+				l = "enter";
+				encr2.push(l);
+				break;
+			case "i":
+				l = "imes";
+				encr2.push(l);
+				break;
+			case "o":
+				l = "ober";
+				encr2.push(l);
+				break;
+			case "u":
+				l = "ufat";
+				encr2.push(l);
+				break;
+			default:
+				l;
+				encr2.push(l);
+				break;
+			
+				
+		}
+
+		}//console.log(encr2);
+
+		let encriptado = encr2.join("");
+
+		//let resultEncriptado = document.querySelector(".titulo");
+
+		resultEncriptado.innerHTML += encriptado;
+
+	}
+
+	function reset(){
+
+		while(resultEncriptado.firstChild){
+			resultEncriptado.removeChild(resultEncriptado.firstChild)
+	}
+
+	}
+
+	function desencriptar(){
+
+        var encr = [];
+		let input = document.querySelector(".input").value;
+
+        for (let i = 0; i <= input.length -1; i++){
+            encr.push(input[i]);
+        }
+        console.log(encr);
+
+        for(var l in diccionario){
+
+            input = input.replaceAll(diccionario[l], l);
+
+        }
+
+        console.log(input);
+
+        //let encriptado = input.join("");
+
+        //let resultEncriptado = document.querySelector(".titulo");
+
+        resultEncriptado.innerHTML += input;
+
+}
+
+	
+	button_e.onclick = () => { 
+		reset()
+		encriptar()		
+	} 
+
+    button_d.onclick = () => { 
+		reset()
+		desencriptar()		
+	} 
+
+
+
+
+</script>

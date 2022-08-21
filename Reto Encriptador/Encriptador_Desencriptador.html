@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+	<title>Encriptador</title>
+</head>
+<body>
+	<header>
+		<img src="imagenes/Vector.png" alt="Logo inicial">
+		<h1 class ="t-encabezado">ENCRIPTADOR Y DESENCRIPTADOR</h1>
+	</header>
+	<main>
+		<section>
+			<textarea class="input-texto" cols="40" rows="6" placeholder="Ingrese texto aquí"></textarea>
+			<div class="botones">
+				<button class="encriptar" onclick="btnEncriptar()">Encriptar</button>
+				<br></br>
+				<button class="desencriptar"onclick="btnDesencriptar()">Desencriptar</button>
+			</div>
+		</section>
+		
+		<section class="mensaje-box">
+			<textarea class="mensaje" cols="18" rows="8"></textarea>
+			<button class="copiar" onclick="copiar()">Copiar</button>
+		</section>
+		
+	</main>
+	<script src="script.js"> </script>
+	<footer class="piepagina">
+		<h1>Hecho por Iván Rosero Agosto 2022</h1>
+	</footer>
+</body>
+</html>
+
+<!-- <meta charset="UTF-8">
+
+<h3>ENCRIPTADOR Y DESENCRIPTADOR</h3>
+
+<input class="input"/>
+<br><h1 class="titulo"></h1>
+<button>Encriptar</button>
+
+<script>	
+
+	function encriptar(){
+
+		var encr = [];
+		var encr2 = [];
+
+		let input = document.querySelector(".input").value;
+		for (let i = 0; i <= input.length -1; i++){
+			encr.push(input[i]);
+		}
+		console.log(encr);
+
+		for (var j = 0; j <= encr.length -1; j++){
+
+			let element = encr[j];
+			
+			switch(element){
+				case "a":
+					element = "ai";
+					encr2.push(element);
+					break;
+				case "e":
+					element = "enter";
+					encr2.push(element);
+					break;
+				case "i":
+					element = "imes";
+					encr2.push(element);
+					break;
+				case "o":
+					element = "ober";
+					encr2.push(element);
+					break;
+				case "u":
+					element = "ufat";
+					encr2.push(element);
+					break;
+				default:
+					element;
+					encr2.push(element);
+					break;
+				
+					
+			}
+			
+		}//console.log(encr2);
+
+		let encriptado = encr2.join("");
+
+		document.querySelector(".titulo");
+		titulo.innerHTML += encriptado; 
+
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = () => { encriptar()
+		
+		
+	} 
+
+
+
+
+
+</script> -->
